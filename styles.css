@@ -1,8 +1,28 @@
 body{
     text-align: center;
+    background-color: black;
 }
 label{
     display:block;
     padding-bottom:1rem;
     margin:7px;
+    font-size: larger;
+    padding-top: 1rem;
+    margin-top:20px;
+    color: aliceblue;
+    
+}
+input{
+    padding: 3px;
+    border-radius: 0.1rem;
+    color:black;
+}
+h1{
+    color:aliceblue;
+    text-align: center;
+}
+#button{
+    width:140px;
+    height:40px;
+    text-size-adjust: large;
 }
