@@ -12,6 +12,10 @@ function profitOrLoss(){
         var qty = stocksQuant.value;
         var curr = currentPrice.value;
         calculate(ip, qty, curr);
+        if(ip =="" || qty == ""||curr =="")
+        {
+            ShowMessage("Please fill up everything.");
+        }
     }
 
 function calculate(initial,quantity,current)
@@ -20,13 +24,13 @@ function calculate(initial,quantity,current)
     {
        var loss = (initial-current) * quantity;
        var lossPercentage = (loss/initial) * 100;
-       ShowMessage( `Hey, the loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}% `) ;
+       ShowMessage( `Hey, the loss is ${loss} and the loss percentage is ${lossPercentage.toFixed(2)}% `) ;
     }
-    else if(initial<current)
+    else if(current>initial)
     {
         var profit = (current-initial) * quantity;
         var profitPercentage=(profit/initial) * 100;
-        ShowMessage(`Hey the profit is ${profit} and the profit percentage is ${profitPercentage}%`);
+        ShowMessage(`Hey the profit is ${profit} and the profit percentage is ${profitPercentage.toFixed(3)}%`);
     }
     else{
       ShowMessage(`No loss!!No profit!!`);
