@@ -16,6 +16,11 @@ function profitOrLoss(){
         {
             ShowMessage("Please fill up everything.");
         }
+        else if(ip <=0 || qty <= 0||curr <=0 )
+        {
+            ShowMessage("Please enter the valid figures!");
+        }
+
     }
 
 function calculate(initial,quantity,current)
